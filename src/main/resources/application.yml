@@ -1,0 +1,24 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    username: root
+    password: 1056017312
+    url: jdbc:mysql:///MP
+  redis:
+    port: 6379
+    host: localhost
+
+logging:
+  level:
+    com.lantu: debug
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+# 为了 Mapper文件中的 resultType="Menu"
+  type-aliases-package: com.lantu.*.entity
